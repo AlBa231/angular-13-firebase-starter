@@ -1,0 +1,33 @@
+image: teracy/angular-cli
+
+before_script:
+ - npm install
+
+stages:
+  - test
+  - deploy
+
+cache:
+  key: "$CI_BUILD_NAME"
+  untracked: false
+  paths:
+    - node_modules
+
+
+
+test:
+  stage: test
+  script:
+  - npm run test-ci
+
+pages:
+  stage: deploy
+  script:
+  - npm run buildProd
+  - cp ./public/index.html ./public/404.html
+
+  artifacts:
+    paths:
+    - public
+  only:
+  - main
