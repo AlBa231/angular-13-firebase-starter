@@ -120,9 +120,21 @@
         },
         "deploy": {
           "builder": "angular-cli-ghpages:deploy"
+        },
+        "lint": {
+          "builder": "@angular-eslint/builder:lint",
+          "options": {
+            "lintFilePatterns": [
+              "src/**/*.ts",
+              "src/**/*.html"
+            ]
+          }
         }
       }
     }
   },
-  "defaultProject": "starter"
+  "defaultProject": "starter",
+  "cli": {
+    "defaultCollection": "@angular-eslint/schematics"
+  }
 }
