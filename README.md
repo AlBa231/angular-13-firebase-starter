@@ -4,6 +4,10 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Demo - https://ng13-demo.paperfree.com
 
+## Setup Repository
+- generate new access token [How to](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
+- add Action secret TOKEN_GITHUB_ACTION (Repository Settings -> Secrets -> Actions -> New repository secret. Copy token from previous part)
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
